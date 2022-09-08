@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +40,9 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         <!-- Preloader -->
-     
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60" />
+        </div>
 
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -613,28 +616,7 @@
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
-            <div class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1 class="m-0">Fund Request
-
-                            </h1>
-                        </div>
-
-                      
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                         
-                            </ol>
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
-                </div>
-                <!-- /.container-fluid -->
-            </div>
+        
             <!-- /.content-header -->
 
             <!-- Main content -->
@@ -647,9 +629,11 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card">
+                                <div class="card-header p-2 text-center" style="background-color: rgb(133, 219, 133);">
+                                    <h1 class="text-uppercase">Add A new User</h1>
+                                  </div>
                                 <form>
                                     <div class="card-body">
-                                       
                                         <div class="input-group  mt-2" style="flex-wrap: unset">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">
@@ -657,115 +641,92 @@
                                                 </span>
                                             </div>
                                             <select class="form-control select2">
-                                                <option selected="selected">Branch Name</option>
-                                                <option>Nagad</option>
-                                                <option>Dutch Bangla</option>
-                                                <option>Bkash</option>
+                                                <option selected="selected">Account Category</option>
+                                                <option>Office</option>
+                                                <option>Auto Trade</option>
+                                                <option>Equidity</option>
+                                               
+                                                <option>Others</option>
 
                                             </select>
 
 
                                         </div>
-                                
-                                    
+                                        <div class="input-group  mt-2" style="flex-wrap: unset">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="fas fa-file-invoice"></i>
+                                                </span>
+                                            </div>
+                                            <select class="form-control select2">
+                                                <option selected="selected">Branch</option>
+                                                <option>Dhaka</option>
+                                                <option>Chitagong</option>
+                                                <option>Rajshahi</option>
+                                               
+                                                <option>Others</option>
+
+                                            </select>
 
 
+                                        </div>
                                         <div class="input-group mt-2">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fas fa-receipt"></i></span>
+                                                <span class="input-group-text"><i class="fas fa-coins"></i></span>
                                             </div>
-                                            <input type="text" class="form-control" name="name" placeholder="User Name">
+                                            <input type="text" class="form-control" name="username" placeholder="User Name">
                                         </div>
+                                        <div class="input-group mt-2">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-coins"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" name="address" placeholder="Address">
+                                        </div>
+                                        <div class="input-group mt-2">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-coins"></i></span>
+                                            </div>
+                                            <input type="number" class="form-control" name="number" placeholder="Phone">
+                                        </div>
+                                        <div class="input-group mt-2">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-coins"></i></span>
+                                            </div>
+                                            <input type="email" class="form-control" name="email" placeholder="Email">
+                                        </div>
+                                       
+                                
+                                        <div class="form-group mt-2">
+
+                                            <div class="input-group date" id="reservationdate"
+                                                data-target-input="nearest">
+                                                <div class="input-group-append" data-target="#reservationdate"
+                                                    data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                                </div>
+                                                <input type="text" class="form-control datetimepicker-input"
+                                                    data-target="#reservationdate">
+
+                                            </div>
+                                        </div>
+
+
+
 
                                     
                                         <div class="input-group mt-2">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="fas fa-coins"></i></span>
                                             </div>
-                                            <input type="number" class="form-control" name="amount" placeholder="Amount">
+                                            <input type="number" class="form-control" name="amount" placeholder="Balance Amount">
                                         </div>
+                                     
                                         <div class="input-group mt-2">
-                                           
-                                            <div class="card" style="width: 100%;">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i class="fas fa-coins"></i></span>
-                                                    <h6 class="m-3">Payment Way</h6>
-                                                </div>
-                                                <div class="card-header p-2">
-                                                  <ul class="nav nav-pills">
-                                                    <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Cash</a></li>
-                                                    <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Bank</a></li>
-                                                    <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Mobile</a></li>
-                                                  </ul>
-                                                </div><!-- /.card-header -->
-                                                <div class="card-body">
-                                                  <div class="tab-content">
-                                                    <div class="active tab-pane" id="activity">
-                                                        <input type="number" class="form-control" name="amount" placeholder="Amount">
-                                                    </div>
-                                                    <!-- /.tab-pane -->
-                                                    <div class="tab-pane" id="timeline">
-                                                        <div class="input-group  mt-2" style="flex-wrap: unset">
-                                                          
-                                                            <select class="form-control select2" style="width: 100%;" >
-                                                                <option selected="selected">Branch Name</option>
-                                                                <option>Nagad</option>
-                                                                <option>Dutch Bangla</option>
-                                                                <option>Bkash</option>
-                
-                                                            </select>
-                
-                
-                                                        </div>
-                                                
-                                                    
-                
-                
-                                                        <div class="input-group mt-2">
-                                                           
-                                                            <input type="text" class="form-control" name="name" placeholder="User Name">
-                                                        </div>
-                
-                                                    
-                                                  
-                                                  
-                                                    </div>
-                                                    <!-- /.tab-pane -->
-                                  
-                                                    <div class="tab-pane" id="settings">
-                                                        <div class="input-group  mt-2" style="flex-wrap: unset">
-                                                          
-                                                            <select class="form-control select2" style="width: 100%;" >
-                                                                <option selected="selected">Methods</option>
-                                                                <option>Nagad</option>
-                                                                <option>Dutch Bangla</option>
-                                                                <option>Bkash</option>
-                
-                                                            </select>
-                
-                
-                                                        </div>
-                                                        <div class="input-group mt-2">
-                                                         
-                                                            <input type="number" class="form-control" name="number" placeholder="Number">
-                                                        </div>
-                                                 
-                                                    </div>
-                                                    <!-- /.tab-pane -->
-                                                  </div>
-                                                  <!-- /.tab-content -->
-                                                </div><!-- /.card-body -->
-                                              </div>
-                                              <!-- /.card -->
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-receipt"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" name="description" placeholder="Description">
                                         </div>
-                                       
-                                   
-                                             
-                                                <!-- /.tab-content -->
-                                            
-                                            <!-- /.card -->
-                                        
-                                      
                                     </div>
                                     <!-- /.card-body -->
 
@@ -1019,6 +980,44 @@
         };
         // DropzoneJS Demo Code End
     </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 </body>
 
 </html>
